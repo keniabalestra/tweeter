@@ -1,0 +1,31 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  font-family: “Source Sans Pro” , sans-serif;
+  width: 100%;
+  font-size: 20px;
+  
+}
+
+#button {
+  font-family: "Bungee", cursive, sans-serif;
+  background-color: #4056a1;
+  color: #ffffff;
+}
+
+#tweet-text{
+  width:100%;
+  border:none;
+  border-bottom-style: solid;
+  color:#5a5a5a;
+  border-bottom-width: 5px;
+  background-color: #f4f1ec ;
+  
+}
+.counter{
+  font-family: "Bungee", cursive, sans-serif;
+  
+}
+.exceed-limit{
+  color: red;
+}
