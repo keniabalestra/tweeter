@@ -29,3 +29,10 @@
 .exceed-limit{
   color: red;
 }
+
+.tweets{
+  border: 3px solid;
+  border-color: #5a5a5a;
+  font-family: 'Source Sans Pro';
+  display: flex;
+}

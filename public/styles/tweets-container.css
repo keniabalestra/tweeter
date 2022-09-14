@@ -1,0 +1,28 @@
+.tweets-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweets--container--user--info {
+    display: flex;
+}
+
+.tweets--container--header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header--img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--icons {
+    display: flex;
+ }
+
