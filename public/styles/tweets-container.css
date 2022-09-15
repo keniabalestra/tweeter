@@ -11,25 +11,26 @@
   box-shadow: 10px 10px #abb9cf; 
 }
 
-.tweets--container--user--info {
+.tweets-container-user-info {
     display: flex;
     align-items: center;
     font-family: “Source Sans Pro” , sans-serif;
 }
 
-.tweets--container--header {
+.tweets-container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     
 }
-.tweets--container--handle{
+.tweets-container-handle{
   color: #abb9cf;
 }
 
-.header--img {
+.header-img {
     width: 5rem;
     height: 5rem;
+    padding: 10px;
 }
 
 .footer {
@@ -41,7 +42,7 @@
   color:#5a5a5a;
 }
 
-.footer--icons {
+.footer-icons {
     display: flex;
  
  }
