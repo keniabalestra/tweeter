@@ -4,11 +4,15 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escapes = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
-
-  const createTweetElement = (tweetObj) => {
-    let $timestamp = timeago.format(tweetObj.created_at);
-    let $tweet = $(` 
+const createTweetElement = (tweetObj) => {
+  let $timestamp = timeago.format(tweetObj.created_at);
+  let $tweet = $(` 
   <article class="tweets-container">
   <header class="tweets-container-header">
     <div class="tweets-container-user-info">
@@ -21,7 +25,7 @@
     </div>
     <div class="tweets-container-handle">${tweetObj.user.handle}</div>
   </header>
-  <p class="tweet-text">${tweetObj.content.text}</p>
+  <p class="tweet-text">${escapes(tweetObj.content.text)}</p>
   <footer class="footer">
     <span class="footer-timestamp">${$timestamp}</span>
     <span class="footer-icons">
@@ -32,25 +36,25 @@
   </footer>
 </article>`);
 
-    return $tweet;
-  };
+  return $tweet;
+};
 
-  const renderTweets = (tweets) => {
-    for (let tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet);
-    }
-  };
+const renderTweets = (tweets) => {
+  for (let tweet of tweets) {
+    const $tweet = createTweetElement(tweet);
+    $('#tweets-container').prepend($tweet);
+  }
+};
 
-  const loadTweets = () => {
-    $.get("/tweets", { method: "GET" })
-      .then((data) => {
-        renderTweets(data);
-        //console.log("Success: ", renderTweets);
-      });
-  };
-  
-  $(document).ready(function() {
+const loadTweets = () => {
+  $.get("/tweets", { method: "GET" })
+    .then((data) => {
+      renderTweets(data);
+      //console.log("Success: ", renderTweets);
+    });
+};
+
+$(document).ready(function() {
   // Attach a submit handler to the form
   $("form").submit(function(event) {
 
@@ -71,10 +75,10 @@
 
     // Send the data using post
     $.post("/tweets", tweetSerialized).then(loadTweets);
-    
+
   });
 
-  
+
   loadTweets();
 });
 
