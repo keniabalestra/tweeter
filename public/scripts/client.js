@@ -65,19 +65,27 @@ $(document).ready(function() {
     const tweetSerialized = $(this).serialize();
 
     //Validate the input
-    const tweetMessage = $(this).find("#tweet-text").val().length;
-    if (!tweetMessage) {
-      return alert("This field is empty! Please add your Tweet");
+
+    const tweetLength = $(this).find("#tweet-text").val().length;
+    if (!tweetLength) {
+      $(".tweet-message-error").text("🙊 This field is empty! Please add your Tweet!").slideDown();
+     
+
+    
     }
-    if (tweetMessage > 140) {
-      return alert("You exceeded our limit of 140 characters!");
+    if (tweetLength > 140) {
+      $(".tweet-message-error").text("🙊 You exceeded our limit of 140 characters!").slideDown();
+     
     }
 
     // Send the data using post
     $.post("/tweets", tweetSerialized).then(loadTweets);
 
   });
-
+  
+  $("form").click(function(){
+    $(".tweet-message-error").hide();
+  });
 
   loadTweets();
 });

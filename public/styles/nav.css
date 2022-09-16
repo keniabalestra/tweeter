@@ -6,13 +6,13 @@
 
   font-family: "Bungee", cursive, sans-serif;
   /* font-weight: 300; */
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+padding: 1rem;
 
   position: fixed;
   top: 0;
 }
-.fa-solid.fa-angles-down {
+.fa-solid.fa-angles-down.fa-bounce {
+  margin-top: 20px;
   float: right;
   color: red;
 }

@@ -1,10 +1,25 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  font-family: “Source Sans Pro” , sans-serif;
+
+  font-family: “Source Sans Pro”, sans-serif;
   width: 100%;
   font-size: 20px;
-  
+  margin: 10px;
+}
+
+#tweet-text {
+  width: 100%;
+  border: none;
+  border-bottom-style: solid;
+  color: #5a5a5a;
+  border-bottom-width: 5px;
+  background-color: #f4f1ec;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 #button {
@@ -12,27 +27,27 @@
   background-color: #4056a1;
   color: #ffffff;
 }
-
-#tweet-text{
-  width:100%;
-  border:none;
-  border-bottom-style: solid;
-  color:#5a5a5a;
-  border-bottom-width: 5px;
-  background-color: #f4f1ec ;
-  
-}
-.counter{
+.counter {
   font-family: "Bungee", cursive, sans-serif;
   
 }
-.exceed-limit{
+.exceed-limit {
   color: red;
 }
 
-.tweets{
+.tweets {
   border: 3px solid;
   border-color: #5a5a5a;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   display: flex;
+}
+
+.tweet-message-error {
+  display: none;
+  justify-content: center;
+  background-color: #e2980863;
+  border: 3px solid #e29808;
+  margin: 5px;
+  padding: 6px;
+  color: #7b5100;
 }
