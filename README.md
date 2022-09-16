@@ -14,5 +14,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
+- Chance
 - Express
+- md5
 - Node 5.10.x or above
+- Nodemon

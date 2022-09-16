@@ -3,7 +3,10 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- External CSS -->
     <link
@@ -23,6 +26,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css "
     />
+
     <!-- External Icons -->
     <script
       src="https://kit.fontawesome.com/801bb15856.js"
@@ -34,15 +38,16 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="/styles/tweets-container.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="/styles/tweets-container.css" type="text/css"/>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -56,17 +61,17 @@
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
       <span>tweeter</span>
-      <i class="fa-solid fa-angles-down fa-bounce"></i>
+      <div class="write-tweet">
+        <span>Write a new tweet</span>
+        <i class="fa-solid fa-angles-down fa-bounce"></i>
+      </div>
     </nav>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header-user">
       <div>
         <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Your Name</h2>
+        <h2>Kenia</h2>
       </div>
     </header>
 
@@ -87,10 +92,7 @@
           </div>
         </form>
       </section>
-
-      <section id="tweets-container">
-        
-      </section>
+      <section id="tweets-container"></section>
     </main>
   </body>
 </html>

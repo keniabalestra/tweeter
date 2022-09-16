@@ -40,6 +40,7 @@ const createTweetElement = (tweetObj) => {
 };
 
 const renderTweets = (tweets) => {
+  $('#tweets-container').empty()
   for (let tweet of tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').prepend($tweet);
@@ -65,28 +66,26 @@ $(document).ready(function() {
     const tweetSerialized = $(this).serialize();
 
     //Validate the input
-
     const tweetLength = $(this).find("#tweet-text").val().length;
     if (!tweetLength) {
       $(".tweet-message-error").text("🙊 This field is empty! Please add your Tweet!").slideDown();
-     
-
-    
     }
     if (tweetLength > 140) {
-      $(".tweet-message-error").text("🙊 You exceeded our limit of 140 characters!").slideDown();
-     
+     return  $(".tweet-message-error").text("🙊 You exceeded our limit of 140 characters!").slideDown();
     }
 
     // Send the data using post
     $.post("/tweets", tweetSerialized).then(loadTweets);
-
+    //Clear form
+    $("form").trigger("reset");
+    //Reset counter
+    $('.counter').text('140');
   });
-  
-  $("form").click(function(){
+ 
+  $("form").click(function() {
     $(".tweet-message-error").hide();
   });
-
   loadTweets();
+  
 });
 

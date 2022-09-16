@@ -1,18 +1,27 @@
 .navbar {
-  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6%;
   width: 100%;
   background-color: #4056a1;
-  color: #ffffff;
-
   font-family: "Bungee", cursive, sans-serif;
-  /* font-weight: 300; */
-padding: 1rem;
-
+  color: #f4f1ec;
+  padding: 1.5rem;
   position: fixed;
-  top: 0;
+  top: 0px;
 }
+
+.write-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
 .fa-solid.fa-angles-down.fa-bounce {
-  margin-top: 20px;
-  float: right;
+  margin-top: 3%;
   color: red;
 }
+

@@ -1,11 +1,17 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-
   font-family: “Source Sans Pro”, sans-serif;
   width: 100%;
   font-size: 20px;
   margin: 10px;
+}
+
+.tweets {
+  border: 3px solid;
+  border-color: #5a5a5a;
+  font-family: "Source Sans Pro";
+  display: flex;
 }
 
 #tweet-text {
@@ -25,21 +31,15 @@
 #button {
   font-family: "Bungee", cursive, sans-serif;
   background-color: #4056a1;
-  color: #ffffff;
-}
-.counter {
-  font-family: "Bungee", cursive, sans-serif;
-  
-}
-.exceed-limit {
-  color: red;
+  color: #f4f1ec;
 }
 
-.tweets {
-  border: 3px solid;
-  border-color: #5a5a5a;
-  font-family: "Source Sans Pro";
-  display: flex;
+.counter {
+  font-family: "Bungee", cursive, sans-serif;
+}
+
+.exceed-limit {
+  color: red;
 }
 
 .tweet-message-error {
