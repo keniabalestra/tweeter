@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  $('#tweet-text').keyup(function() {
+  $('#tweet-text').on('input', function() {
     let charLimit = 140;
-    let charRemaining = charLimit - $(this).val().length;
+    let len = $(this).val().length;
+    let charRemaining = charLimit - len;
+
     $(".counter").text(charRemaining);
 
     if (charRemaining < 0) {
